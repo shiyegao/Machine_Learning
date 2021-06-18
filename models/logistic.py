@@ -14,11 +14,12 @@ class logisticRegression:
         self.log = [     1,       2,      5,     10,     20,     50,     100,    150,    200,    250,    300,    350,    400,    450,     500]
 
 
-    def softmax(self, X):
-        return 1.0 / (1 + np.exp(-X/100))
+    def sigmoid(self, X):
+        X = X.clip(-100,100000)
+        return 1.0 / (1 + np.exp(-X))
 
 
-    def sigmoid(self, A, mode='scale', ratio=100):
+    def softmax(self, A, mode='scale', ratio=100):
         if mode=='scale':
             A = A.clip(-10000,100000)
             exp_mat = np.exp(-A/ratio)
