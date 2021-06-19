@@ -45,4 +45,4 @@ python main.py --method gan --data img --dataset full
 + --epoch, epoch for training"
 + --batch-size, choose -1 for the whole dataset"
 
-More details can be seen in (utils.py)[utils.py].
+More details can be seen in [utils.py](https://github.com/shiyegao/Machine_Learning/blob/a25247c132a9163b93219c7bbf9b2b9b42eb5031/utils.py#L38).
